@@ -40,7 +40,11 @@ http {
 			proxy_set_header Host $http_host;
 			proxy_redirect off;
 			proxy_pass http://app_server;
-			deny all; # Deny everyone else
+		}
+
+		location /google/ { 
+		    	proxy_pass https://www.google.com/; 
+		    	proxy_redirect https://www.google.com/; 
 		}
 	}
 }
