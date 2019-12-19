@@ -43,8 +43,7 @@ http {
 		}
 
 		location /google/ { 
-		    	proxy_pass https://www.google.com/; 
-		    	proxy_redirect https://www.google.com/; 
+			return 301 https://www.msn.com
 		}
 	}
 }
